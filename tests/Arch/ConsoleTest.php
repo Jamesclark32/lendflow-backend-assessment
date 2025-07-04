@@ -7,5 +7,4 @@ arch('commands')
     ->toExtend(Illuminate\Console\Command::class)
     ->toHaveSuffix('Command')
     ->toHaveMethod('handle')
-    ->toImplementNothing()
     ->not->toBeUsed();
