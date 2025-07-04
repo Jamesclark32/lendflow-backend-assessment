@@ -33,4 +33,4 @@ jobs:
         run: vendor/bin/pint --dirty
 
       - name: Rector
-        run: composer rector-lint-check
+        run: composer rector-lint-dry
