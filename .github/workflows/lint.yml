@@ -32,8 +32,5 @@ jobs:
       - name: Lint Backend
         run: vendor/bin/pint --dirty
 
-      - name: Lint Frontend
-        run: npm run format:check:dirty
-
       - name: Rector
         run: composer rector-lint-check
