@@ -1,0 +1,35 @@
+<?php
+
+declare(strict_types=1);
+
+arch('models')
+    ->expect('App\Models')
+    ->toBeClasses()
+    ->ignoring('App\Models\Traits')
+    ->toExtend(Illuminate\Database\Eloquent\Model::class)
+    ->ignoring('App\Models\Traits')
+    ->toHaveMethod('casts')
+    ->ignoring('App\Models\Traits')
+    ->toHaveMethod('fillable')
+    ->ignoring('App\Models\Traits')
+    ->toOnlyBeUsedIn([
+        'App\Actions',
+        'App\ApiClients',
+        'App\Console',
+        'App\Events',
+        'App\Helpers',
+        'App\Http',
+        'App\Jobs',
+        'App\Listeners',
+        'App\Mail',
+        'App\Models',
+        'App\Notifications',
+        'App\Observers',
+        'App\Policies',
+        'App\Providers',
+        'App\Queries',
+        'App\Transformers',
+        'Database\Factories',
+        'Database\Seeders',
+    ])
+    ->ignoring('App\Models\Traits');

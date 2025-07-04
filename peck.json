@@ -1,0 +1,12 @@
+{
+    "preset": "laravel",
+    "ignore": {
+        "words": [
+            "favicon",
+            "filesystems",
+            "js",
+            "php"
+        ],
+        "paths": []
+    }
+}
