@@ -28,11 +28,6 @@ return [
             'command' => './vendor/bin/pint --dirty --test',
         ],
         [
-            'title' => 'Prettier JS linting (dirty files only)',
-            'command' => 'npx prettier --config .prettierrc -u -l $(git diff --name-only --diff-filter=d HEAD  | xargs)',
-            'failure_hint' => 'Run "npx prettier --config .prettierrc -u -w $(git diff --name-only --diff-filter=d HEAD  | xargs)" to have prettier fix these code style issues while remaining scoped to files with uncommited changes only.',
-        ],
-        [
             'title' => 'Rector code quality',
             'command' => './vendor/bin/rector --dry-run',
         ],
@@ -53,10 +48,6 @@ return [
         [
             'title' => 'Rector',
             'command' => './vendor/bin/rector',
-        ],
-        [
-            'title' => 'Prettier (dirty files only)',
-            'command' => 'npx prettier --config .prettierrc -u -w $(git diff --name-only --diff-filter=d HEAD  | xargs)',
         ],
     ],
 ];
