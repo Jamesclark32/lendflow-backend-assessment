@@ -32,6 +32,10 @@ return [
             'command' => './vendor/bin/rector --dry-run',
         ],
         [
+            'title' => 'Peck spelling audit',
+            'command' => './vendor/bin/peck',
+        ],
+        [
             'title' => 'Composer Audit',
             'command' => 'composer audit',
         ],
