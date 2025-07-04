@@ -13,7 +13,7 @@ return [
         ],
         [
             'title' => 'Test coverage',
-            'command' => './vendor/bin/pest --coverage --min=80',
+            'command' => './vendor/bin/pest --coverage --min=100',
         ],
         [
             'title' => 'Type coverage',
