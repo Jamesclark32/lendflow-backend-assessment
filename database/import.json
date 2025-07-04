@@ -1,0 +1,1759 @@
+{
+    "products": [
+        {
+            "name": "Men's Classic T-Shirt",
+            "categories": ["shirts", "men"],
+            "price": 1999,
+            "on_sale": false,
+            "sale_price": 1499,
+            "color": "black",
+            "upc": "012345678901"
+        },
+        {
+            "name": "Women's V-Neck Top",
+            "categories": ["shirts", "women"],
+            "price": 2499,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "white",
+            "upc": "012345678902"
+        },
+        {
+            "name": "Men's Slim Fit Jeans",
+            "categories": ["pants", "men"],
+            "price": 4999,
+            "on_sale": false,
+            "sale_price": 3999,
+            "color": "blue",
+            "upc": "012345678903"
+        },
+        {
+            "name": "Women's High-Waisted Leggings",
+            "categories": ["pants", "women"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "black",
+            "upc": "012345678904"
+        },
+        {
+            "name": "Unisex Hooded Sweatshirt",
+            "categories": ["sweatshirts", "unisex"],
+            "price": 4499,
+            "on_sale": false,
+            "sale_price": 3499,
+            "color": "gray",
+            "upc": "012345678905"
+        },
+        {
+            "name": "Men's Leather Jacket",
+            "categories": ["jackets", "men"],
+            "price": 9999,
+            "on_sale": true,
+            "sale_price": 7999,
+            "color": "brown",
+            "upc": "012345678906"
+        },
+        {
+            "name": "Women's Wool Coat",
+            "categories": ["jackets", "women"],
+            "price": 12999,
+            "on_sale": false,
+            "sale_price": 9999,
+            "color": "red",
+            "upc": "012345678907"
+        },
+        {
+            "name": "Men's Running Shoes",
+            "categories": ["shoes", "men"],
+            "price": 7999,
+            "on_sale": true,
+            "sale_price": 5999,
+            "color": "white",
+            "upc": "012345678908"
+        },
+        {
+            "name": "Women's Ankle Boots",
+            "categories": ["shoes", "women"],
+            "price": 8999,
+            "on_sale": false,
+            "sale_price": 6999,
+            "color": "black",
+            "upc": "012345678909"
+        },
+        {
+            "name": "Kids' Graphic Tee",
+            "categories": ["shirts", "kids"],
+            "price": 1499,
+            "on_sale": true,
+            "sale_price": 999,
+            "color": "green",
+            "upc": "012345678910"
+        },
+        {
+            "name": "Men's Polo Shirt",
+            "categories": ["shirts", "men"],
+            "price": 2999,
+            "on_sale": false,
+            "sale_price": 2499,
+            "color": "navy",
+            "upc": "012345678911"
+        },
+        {
+            "name": "Women's Denim Skirt",
+            "categories": ["skirts", "women"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "blue",
+            "upc": "012345678912"
+        },
+        {
+            "name": "Men's Cargo Shorts",
+            "categories": ["shorts", "men"],
+            "price": 3499,
+            "on_sale": false,
+            "sale_price": 2799,
+            "color": "khaki",
+            "upc": "012345678913"
+        },
+        {
+            "name": "Women's Sundress",
+            "categories": ["dresses", "women"],
+            "price": 5999,
+            "on_sale": true,
+            "sale_price": 4999,
+            "color": "red",
+            "upc": "012345678914"
+        },
+        {
+            "name": "Unisex Baseball Cap",
+            "categories": ["accessories", "unisex"],
+            "price": 1999,
+            "on_sale": false,
+            "sale_price": 1499,
+            "color": "black",
+            "upc": "012345678915"
+        },
+        {
+            "name": "Men's Dress Shirt",
+            "categories": ["shirts", "men"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "white",
+            "upc": "012345678916"
+        },
+        {
+            "name": "Women's Cardigan",
+            "categories": ["sweaters", "women"],
+            "price": 4999,
+            "on_sale": false,
+            "sale_price": 3999,
+            "color": "gray",
+            "upc": "012345678917"
+        },
+        {
+            "name": "Kids' Sneakers",
+            "categories": ["shoes", "kids"],
+            "price": 4999,
+            "on_sale": true,
+            "sale_price": 3999,
+            "color": "blue",
+            "upc": "012345678918"
+        },
+        {
+            "name": "Men's Winter Parka",
+            "categories": ["jackets", "men"],
+            "price": 14999,
+            "on_sale": false,
+            "sale_price": 11999,
+            "color": "navy",
+            "upc": "012345678919"
+        },
+        {
+            "name": "Women's Athletic Shorts",
+            "categories": ["shorts", "women"],
+            "price": 2999,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "black",
+            "upc": "012345678920"
+        },
+        {
+            "name": "Men's Crew Neck Sweater",
+            "categories": ["sweaters", "men"],
+            "price": 4499,
+            "on_sale": false,
+            "sale_price": 3499,
+            "color": "green",
+            "upc": "012345678921"
+        },
+        {
+            "name": "Women's Maxi Dress",
+            "categories": ["dresses", "women"],
+            "price": 6999,
+            "on_sale": true,
+            "sale_price": 5499,
+            "color": "red",
+            "upc": "012345678922"
+        },
+        {
+            "name": "Kids' Raincoat",
+            "categories": ["jackets", "kids"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "yellow",
+            "upc": "012345678923"
+        },
+        {
+            "name": "Unisex Beanie",
+            "categories": ["accessories", "unisex"],
+            "price": 1499,
+            "on_sale": true,
+            "sale_price": 999,
+            "color": "gray",
+            "upc": "012345678924"
+        },
+        {
+            "name": "Men's Chinos",
+            "categories": ["pants", "men"],
+            "price": 4999,
+            "on_sale": false,
+            "sale_price": 3999,
+            "color": "khaki",
+            "upc": "012345678925"
+        },
+        {
+            "name": "Women's Blouse",
+            "categories": ["shirts", "women"],
+            "price": 3499,
+            "on_sale": true,
+            "sale_price": 2799,
+            "color": "white",
+            "upc": "012345678926"
+        },
+        {
+            "name": "Kids' Pajamas",
+            "categories": ["sleepwear", "kids"],
+            "price": 2499,
+            "on_sale": false,
+            "sale_price": 1999,
+            "color": "blue",
+            "upc": "012345678927"
+        },
+        {
+            "name": "Men's Athletic Shoes",
+            "categories": ["shoes", "men"],
+            "price": 6999,
+            "on_sale": true,
+            "sale_price": 5499,
+            "color": "black",
+            "upc": "012345678928"
+        },
+        {
+            "name": "Women's Trench Coat",
+            "categories": ["jackets", "women"],
+            "price": 11999,
+            "on_sale": false,
+            "sale_price": 8999,
+            "color": "navy",
+            "upc": "012345678929"
+        },
+        {
+            "name": "Unisex Backpack",
+            "categories": ["accessories", "unisex"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "green",
+            "upc": "012345678930"
+        },
+        {
+            "name": "Men's Tank Top",
+            "categories": ["shirts", "men"],
+            "price": 1999,
+            "on_sale": false,
+            "sale_price": 1499,
+            "color": "gray",
+            "upc": "012345678931"
+        },
+        {
+            "name": "Women's Yoga Pants",
+            "categories": ["pants", "women"],
+            "price": 4499,
+            "on_sale": true,
+            "sale_price": 3499,
+            "color": "black",
+            "upc": "012345678932"
+        },
+        {
+            "name": "Kids' Hoodie",
+            "categories": ["sweatshirts", "kids"],
+            "price": 3499,
+            "on_sale": false,
+            "sale_price": 2799,
+            "color": "red",
+            "upc": "012345678933"
+        },
+        {
+            "name": "Men's Blazer",
+            "categories": ["jackets", "men"],
+            "price": 9999,
+            "on_sale": true,
+            "sale_price": 7999,
+            "color": "navy",
+            "upc": "012345678934"
+        },
+        {
+            "name": "Women's Sandals",
+            "categories": ["shoes", "women"],
+            "price": 4999,
+            "on_sale": false,
+            "sale_price": 3999,
+            "color": "white",
+            "upc": "012345678935"
+        },
+        {
+            "name": "Unisex Sunglasses",
+            "categories": ["accessories", "unisex"],
+            "price": 2999,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "black",
+            "upc": "012345678936"
+        },
+        {
+            "name": "Men's Sweatpants",
+            "categories": ["pants", "men"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "gray",
+            "upc": "012345678937"
+        },
+        {
+            "name": "Women's Cocktail Dress",
+            "categories": ["dresses", "women"],
+            "price": 7999,
+            "on_sale": true,
+            "sale_price": 5999,
+            "color": "red",
+            "upc": "012345678938"
+        },
+        {
+            "name": "Kids' Shorts",
+            "categories": ["shorts", "kids"],
+            "price": 1999,
+            "on_sale": false,
+            "sale_price": 1499,
+            "color": "blue",
+            "upc": "012345678939"
+        },
+        {
+            "name": "Men's Oxford Shoes",
+            "categories": ["shoes", "men"],
+            "price": 8999,
+            "on_sale": true,
+            "sale_price": 6999,
+            "color": "brown",
+            "upc": "012345678940"
+        },
+        {
+            "name": "Women's Turtleneck",
+            "categories": ["sweaters", "women"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "black",
+            "upc": "012345678941"
+        },
+        {
+            "name": "Unisex Scarf",
+            "categories": ["accessories", "unisex"],
+            "price": 2499,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "red",
+            "upc": "012345678942"
+        },
+        {
+            "name": "Men's Long-Sleeve Tee",
+            "categories": ["shirts", "men"],
+            "price": 2499,
+            "on_sale": false,
+            "sale_price": 1999,
+            "color": "navy",
+            "upc": "012345678943"
+        },
+        {
+            "name": "Women's A-Line Skirt",
+            "categories": ["skirts", "women"],
+            "price": 4499,
+            "on_sale": true,
+            "sale_price": 3499,
+            "color": "green",
+            "upc": "012345678944"
+        },
+        {
+            "name": "Kids' Jacket",
+            "categories": ["jackets", "kids"],
+            "price": 4999,
+            "on_sale": false,
+            "sale_price": 3999,
+            "color": "blue",
+            "upc": "012345678945"
+        },
+        {
+            "name": "Men's Windbreaker",
+            "categories": ["jackets", "men"],
+            "price": 5999,
+            "on_sale": true,
+            "sale_price": 4999,
+            "color": "black",
+            "upc": "012345678946"
+        },
+        {
+            "name": "Women's Slippers",
+            "categories": ["shoes", "women"],
+            "price": 2999,
+            "on_sale": false,
+            "sale_price": 2499,
+            "color": "gray",
+            "upc": "012345678947"
+        },
+        {
+            "name": "Unisex Belt",
+            "categories": ["accessories", "unisex"],
+            "price": 1999,
+            "on_sale": true,
+            "sale_price": 1499,
+            "color": "brown",
+            "upc": "012345678948"
+        },
+        {
+            "name": "Men's Flannel Shirt",
+            "categories": ["shirts", "men"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "red",
+            "upc": "012345678949"
+        },
+        {
+            "name": "Women's Capri Pants",
+            "categories": ["pants", "women"],
+            "price": 4499,
+            "on_sale": true,
+            "sale_price": 3499,
+            "color": "navy",
+            "upc": "012345678950"
+        },
+        {
+            "name": "Kids' Dress",
+            "categories": ["dresses", "kids"],
+            "price": 3499,
+            "on_sale": false,
+            "sale_price": 2799,
+            "color": "yellow",
+            "upc": "012345678951"
+        },
+        {
+            "name": "Men's Swim Trunks",
+            "categories": ["shorts", "men"],
+            "price": 2999,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "blue",
+            "upc": "012345678952"
+        },
+        {
+            "name": "Women's Pullover",
+            "categories": ["sweaters", "women"],
+            "price": 4999,
+            "on_sale": false,
+            "sale_price": 3999,
+            "color": "white",
+            "upc": "012345678953"
+        },
+        {
+            "name": "Unisex Socks",
+            "categories": ["accessories", "unisex"],
+            "price": 999,
+            "on_sale": true,
+            "sale_price": 799,
+            "color": "black",
+            "upc": "012345678954"
+        },
+        {
+            "name": "Men's Vest",
+            "categories": ["jackets", "men"],
+            "price": 5999,
+            "on_sale": false,
+            "sale_price": 4999,
+            "color": "gray",
+            "upc": "012345678955"
+        },
+        {
+            "name": "Women's Sneakers",
+            "categories": ["shoes", "women"],
+            "price": 6999,
+            "on_sale": true,
+            "sale_price": 5499,
+            "color": "white",
+            "upc": "012345678956"
+        },
+        {
+            "name": "Kids' Sweatpants",
+            "categories": ["pants", "kids"],
+            "price": 2499,
+            "on_sale": false,
+            "sale_price": 1999,
+            "color": "navy",
+            "upc": "012345678957"
+        },
+        {
+            "name": "Men's Henley Shirt",
+            "categories": ["shirts", "men"],
+            "price": 2999,
+            "on_sale": true,
+            "sale_price": 2499,
+            "color": "green",
+            "upc": "012345678958"
+        },
+        {
+            "name": "Women's Jumpsuit",
+            "categories": ["dresses", "women"],
+            "price": 7999,
+            "on_sale": false,
+            "sale_price": 5999,
+            "color": "black",
+            "upc": "012345678959"
+        },
+        {
+            "name": "Unisex Watch",
+            "categories": ["accessories", "unisex"],
+            "price": 4999,
+            "on_sale": true,
+            "sale_price": 3999,
+            "color": "brown",
+            "upc": "012345678960"
+        },
+        {
+            "name": "Men's Bomber Jacket",
+            "categories": ["jackets", "men"],
+            "price": 8999,
+            "on_sale": false,
+            "sale_price": 6999,
+            "color": "navy",
+            "upc": "012345678961"
+        },
+        {
+            "name": "Women's Pencil Skirt",
+            "categories": ["skirts", "women"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "red",
+            "upc": "012345678962"
+        },
+        {
+            "name": "Kids' Sandals",
+            "categories": ["shoes", "kids"],
+            "price": 2999,
+            "on_sale": false,
+            "sale_price": 2499,
+            "color": "yellow",
+            "upc": "012345678963"
+        },
+        {
+            "name": "Men's Sweatshirt",
+            "categories": ["sweatshirts", "men"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "gray",
+            "upc": "012345678964"
+        },
+        {
+            "name": "Women's Nightgown",
+            "categories": ["sleepwear", "women"],
+            "price": 3499,
+            "on_sale": false,
+            "sale_price": 2799,
+            "color": "white",
+            "upc": "012345678965"
+        },
+        {
+            "name": "Unisex Tote Bag",
+            "categories": ["accessories", "unisex"],
+            "price": 2999,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "blue",
+            "upc": "012345678966"
+        },
+        {
+            "name": "Men's Dress Pants",
+            "categories": ["pants", "men"],
+            "price": 5999,
+            "on_sale": false,
+            "sale_price": 4999,
+            "color": "black",
+            "upc": "012345678967"
+        },
+        {
+            "name": "Women's Flats",
+            "categories": ["shoes", "women"],
+            "price": 4999,
+            "on_sale": true,
+            "sale_price": 3999,
+            "color": "red",
+            "upc": "012345678968"
+        },
+        {
+            "name": "Kids' Cap",
+            "categories": ["accessories", "kids"],
+            "price": 1499,
+            "on_sale": false,
+            "sale_price": 999,
+            "color": "green",
+            "upc": "012345678969"
+        },
+        {
+            "name": "Men's Tuxedo",
+            "categories": ["suits", "men"],
+            "price": 19999,
+            "on_sale": true,
+            "sale_price": 15999,
+            "color": "black",
+            "upc": "012345678970"
+        },
+        {
+            "name": "Women's Romper",
+            "categories": ["dresses", "women"],
+            "price": 5999,
+            "on_sale": false,
+            "sale_price": 4999,
+            "color": "navy",
+            "upc": "012345678971"
+        },
+        {
+            "name": "Unisex Gloves",
+            "categories": ["accessories", "unisex"],
+            "price": 1999,
+            "on_sale": true,
+            "sale_price": 1499,
+            "color": "brown",
+            "upc": "012345678972"
+        },
+        {
+            "name": "Men's Cardigan",
+            "categories": ["sweaters", "men"],
+            "price": 4999,
+            "on_sale": false,
+            "sale_price": 3999,
+            "color": "gray",
+            "upc": "012345678973"
+        },
+        {
+            "name": "Women's Heels",
+            "categories": ["shoes", "women"],
+            "price": 7999,
+            "on_sale": true,
+            "sale_price": 5999,
+            "color": "black",
+            "upc": "012345678974"
+        },
+        {
+            "name": "Kids' T-Shirt",
+            "categories": ["shirts", "kids"],
+            "price": 1499,
+            "on_sale": false,
+            "sale_price": 999,
+            "color": "yellow",
+            "upc": "012345678975"
+        },
+        {
+            "name": "Men's Raincoat",
+            "categories": ["jackets", "men"],
+            "price": 7999,
+            "on_sale": true,
+            "sale_price": 5999,
+            "color": "navy",
+            "upc": "012345678976"
+        },
+        {
+            "name": "Women's Tank Top",
+            "categories": ["shirts", "women"],
+            "price": 1999,
+            "on_sale": false,
+            "sale_price": 1499,
+            "color": "white",
+            "upc": "012345678977"
+        },
+        {
+            "name": "Unisex Wallet",
+            "categories": ["accessories", "unisex"],
+            "price": 2499,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "brown",
+            "upc": "012345678978"
+        },
+        {
+            "name": "Men's Shorts",
+            "categories": ["shorts", "men"],
+            "price": 2999,
+            "on_sale": false,
+            "sale_price": 2499,
+            "color": "khaki",
+            "upc": "012345678979"
+        },
+        {
+            "name": "Women's Sweater",
+            "categories": ["sweaters", "women"],
+            "price": 4499,
+            "on_sale": true,
+            "sale_price": 3499,
+            "color": "red",
+            "upc": "012345678980"
+        },
+        {
+            "name": "Kids' Boots",
+            "categories": ["shoes", "kids"],
+            "price": 4999,
+            "on_sale": false,
+            "sale_price": 3999,
+            "color": "black",
+            "upc": "012345678981"
+        },
+        {
+            "name": "Men's Pullover",
+            "categories": ["sweaters", "men"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "green",
+            "upc": "012345678982"
+        },
+        {
+            "name": "Women's Denim Jacket",
+            "categories": ["jackets", "women"],
+            "price": 6999,
+            "on_sale": false,
+            "sale_price": 5499,
+            "color": "blue",
+            "upc": "012345678983"
+        },
+        {
+            "name": "Unisex Umbrella",
+            "categories": ["accessories", "unisex"],
+            "price": 1999,
+            "on_sale": true,
+            "sale_price": 1499,
+            "color": "black",
+            "upc": "012345678984"
+        },
+        {
+            "name": "Men's Track Pants",
+            "categories": ["pants", "men"],
+            "price": 3499,
+            "on_sale": false,
+            "sale_price": 2799,
+            "color": "gray",
+            "upc": "012345678985"
+        },
+        {
+            "name": "Women's Midi Dress",
+            "categories": ["dresses", "women"],
+            "price": 6499,
+            "on_sale": true,
+            "sale_price": 4999,
+            "color": "red",
+            "upc": "012345678986"
+        },
+        {
+            "name": "Kids' Beanie",
+            "categories": ["accessories", "kids"],
+            "price": 1299,
+            "on_sale": false,
+            "sale_price": 999,
+            "color": "yellow",
+            "upc": "012345678987"
+        },
+        {
+            "name": "Men's Loafers",
+            "categories": ["shoes", "men"],
+            "price": 7999,
+            "on_sale": true,
+            "sale_price": 5999,
+            "color": "brown",
+            "upc": "012345678988"
+        },
+        {
+            "name": "Women's Poncho",
+            "categories": ["jackets", "women"],
+            "price": 5999,
+            "on_sale": false,
+            "sale_price": 4999,
+            "color": "green",
+            "upc": "012345678989"
+        },
+        {
+            "name": "Unisex Keychain",
+            "categories": ["accessories", "unisex"],
+            "price": 999,
+            "on_sale": true,
+            "sale_price": 799,
+            "color": "black",
+            "upc": "012345678990"
+        },
+        {
+            "name": "Men's Graphic Tee",
+            "categories": ["shirts", "men"],
+            "price": 2499,
+            "on_sale": false,
+            "sale_price": 1999,
+            "color": "white",
+            "upc": "012345678991"
+        },
+        {
+            "name": "Women's Chiffon Blouse",
+            "categories": ["shirts", "women"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "navy",
+            "upc": "012345678992"
+        },
+        {
+            "name": "Kids' Leggings",
+            "categories": ["pants", "kids"],
+            "price": 1999,
+            "on_sale": false,
+            "sale_price": 1499,
+            "color": "black",
+            "upc": "012345678993"
+        },
+        {
+            "name": "Men's Puffer Jacket",
+            "categories": ["jackets", "men"],
+            "price": 9999,
+            "on_sale": true,
+            "sale_price": 7999,
+            "color": "blue",
+            "upc": "012345678994"
+        },
+        {
+            "name": "Women's Athletic Top",
+            "categories": ["shirts", "women"],
+            "price": 2999,
+            "on_sale": false,
+            "sale_price": 2499,
+            "color": "gray",
+            "upc": "012345678995"
+        },
+        {
+            "name": "Unisex Fanny Pack",
+            "categories": ["accessories", "unisex"],
+            "price": 2499,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "red",
+            "upc": "012345678996"
+        },
+        {
+            "name": "Men's Dress Shoes",
+            "categories": ["shoes", "men"],
+            "price": 8999,
+            "on_sale": false,
+            "sale_price": 6999,
+            "color": "black",
+            "upc": "012345678997"
+        },
+        {
+            "name": "Women's Cargo Pants",
+            "categories": ["pants", "women"],
+            "price": 4999,
+            "on_sale": true,
+            "sale_price": 3999,
+            "color": "khaki",
+            "upc": "012345678998"
+        },
+        {
+            "name": "Kids' Swimsuit",
+            "categories": ["swimwear", "kids"],
+            "price": 2499,
+            "on_sale": false,
+            "sale_price": 1999,
+            "color": "blue",
+            "upc": "012345678999"
+        },
+        {
+            "name": "Men's V-Neck Sweater",
+            "categories": ["sweaters", "men"],
+            "price": 4499,
+            "on_sale": true,
+            "sale_price": 3499,
+            "color": "navy",
+            "upc": "012345679000"
+        },
+        {
+            "name": "Women's Bikini",
+            "categories": ["swimwear", "women"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "red",
+            "upc": "012345679001"
+        },
+        {
+            "name": "Unisex Tie",
+            "categories": ["accessories", "unisex"],
+            "price": 1999,
+            "on_sale": true,
+            "sale_price": 1499,
+            "color": "black",
+            "upc": "012345679002"
+        },
+        {
+            "name": "Men's Overcoat",
+            "categories": ["jackets", "men"],
+            "price": 12999,
+            "on_sale": false,
+            "sale_price": 9999,
+            "color": "gray",
+            "upc": "012345679003"
+        },
+        {
+            "name": "Women's Crop Top",
+            "categories": ["shirts", "women"],
+            "price": 2499,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "white",
+            "upc": "012345679004"
+        },
+        {
+            "name": "Kids' Scarf",
+            "categories": ["accessories", "kids"],
+            "price": 1499,
+            "on_sale": false,
+            "sale_price": 999,
+            "color": "yellow",
+            "upc": "012345679005"
+        },
+        {
+            "name": "Men's Board Shorts",
+            "categories": ["shorts", "men"],
+            "price": 3499,
+            "on_sale": true,
+            "sale_price": 2799,
+            "color": "blue",
+            "upc": "012345679006"
+        },
+        {
+            "name": "Women's Peacoat",
+            "categories": ["jackets", "women"],
+            "price": 10999,
+            "on_sale": false,
+            "sale_price": 8499,
+            "color": "navy",
+            "upc": "012345679007"
+        },
+        {
+            "name": "Unisex Headband",
+            "categories": ["accessories", "unisex"],
+            "price": 999,
+            "on_sale": true,
+            "sale_price": 799,
+            "color": "black",
+            "upc": "012345679008"
+        },
+        {
+            "name": "Men's Rugby Shirt",
+            "categories": ["shirts", "men"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "green",
+            "upc": "012345679009"
+        },
+        {
+            "name": "Women's Palazzo Pants",
+            "categories": ["pants", "women"],
+            "price": 4999,
+            "on_sale": true,
+            "sale_price": 3999,
+            "color": "red",
+            "upc": "012345679010"
+        },
+        {
+            "name": "Kids' Vest",
+            "categories": ["jackets", "kids"],
+            "price": 3499,
+            "on_sale": false,
+            "sale_price": 2799,
+            "color": "blue",
+            "upc": "012345679011"
+        },
+        {
+            "name": "Men's Flip Flops",
+            "categories": ["shoes", "men"],
+            "price": 1999,
+            "on_sale": true,
+            "sale_price": 1499,
+            "color": "black",
+            "upc": "012345679012"
+        },
+        {
+            "name": "Women's Kimono",
+            "categories": ["jackets", "women"],
+            "price": 5999,
+            "on_sale": false,
+            "sale_price": 4999,
+            "color": "white",
+            "upc": "012345679013"
+        },
+        {
+            "name": "Unisex Necklace",
+            "categories": ["accessories", "unisex"],
+            "price": 2999,
+            "on_sale": true,
+            "sale_price": 2499,
+            "color": "brown",
+            "upc": "012345679014"
+        },
+        {
+            "name": "Men's Corduroy Pants",
+            "categories": ["pants", "men"],
+            "price": 4999,
+            "on_sale": false,
+            "sale_price": 3999,
+            "color": "khaki",
+            "upc": "012345679015"
+        },
+        {
+            "name": "Women's Halter Top",
+            "categories": ["shirts", "women"],
+            "price": 2499,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "red",
+            "upc": "012345679016"
+        },
+        {
+            "name": "Kids' Sunglasses",
+            "categories": ["accessories", "kids"],
+            "price": 1999,
+            "on_sale": false,
+            "sale_price": 1499,
+            "color": "black",
+            "upc": "012345679017"
+        },
+        {
+            "name": "Men's Trench Coat",
+            "categories": ["jackets", "men"],
+            "price": 11999,
+            "on_sale": true,
+            "sale_price": 8999,
+            "color": "navy",
+            "upc": "012345679018"
+        },
+        {
+            "name": "Women's One-Piece Swimsuit",
+            "categories": ["swimwear", "women"],
+            "price": 4999,
+            "on_sale": false,
+            "sale_price": 3999,
+            "color": "blue",
+            "upc": "012345679019"
+        },
+        {
+            "name": "Unisex Earrings",
+            "categories": ["accessories", "unisex"],
+            "price": 2499,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "black",
+            "upc": "012345679020"
+        },
+        {
+            "name": "Men's Athletic Shorts",
+            "categories": ["shorts", "men"],
+            "price": 2999,
+            "on_sale": false,
+            "sale_price": 2499,
+            "color": "gray",
+            "upc": "012345679021"
+        },
+        {
+            "name": "Women's Knit Dress",
+            "categories": ["dresses", "women"],
+            "price": 6499,
+            "on_sale": true,
+            "sale_price": 4999,
+            "color": "green",
+            "upc": "012345679022"
+        },
+        {
+            "name": "Kids' Mittens",
+            "categories": ["accessories", "kids"],
+            "price": 1499,
+            "on_sale": false,
+            "sale_price": 999,
+            "color": "red",
+            "upc": "012345679023"
+        },
+        {
+            "name": "Men's Casual Shirt",
+            "categories": ["shirts", "men"],
+            "price": 3499,
+            "on_sale": true,
+            "sale_price": 2799,
+            "color": "white",
+            "upc": "012345679024"
+        },
+        {
+            "name": "Women's Parka",
+            "categories": ["jackets", "women"],
+            "price": 12999,
+            "on_sale": false,
+            "sale_price": 9999,
+            "color": "black",
+            "upc": "012345679025"
+        },
+        {
+            "name": "Unisex Bracelet",
+            "categories": ["accessories", "unisex"],
+            "price": 2999,
+            "on_sale": true,
+            "sale_price": 2499,
+            "color": "brown",
+            "upc": "012345679026"
+        },
+        {
+            "name": "Men's Sandals",
+            "categories": ["shoes", "men"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "black",
+            "upc": "012345679027"
+        },
+        {
+            "name": "Women's Wrap Dress",
+            "categories": ["dresses", "women"],
+            "price": 6999,
+            "on_sale": true,
+            "sale_price": 5499,
+            "color": "red",
+            "upc": "012345679028"
+        },
+        {
+            "name": "Kids' Socks",
+            "categories": ["accessories", "kids"],
+            "price": 999,
+            "on_sale": false,
+            "sale_price": 799,
+            "color": "blue",
+            "upc": "012345679029"
+        },
+        {
+            "name": "Men's Hoodie",
+            "categories": ["sweatshirts", "men"],
+            "price": 4499,
+            "on_sale": true,
+            "sale_price": 3499,
+            "color": "navy",
+            "upc": "012345679030"
+        },
+        {
+            "name": "Women's Leather Jacket",
+            "categories": ["jackets", "women"],
+            "price": 9999,
+            "on_sale": false,
+            "sale_price": 7999,
+            "color": "black",
+            "upc": "012345679031"
+        },
+        {
+            "name": "Unisex Ring",
+            "categories": ["accessories", "unisex"],
+            "price": 2499,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "black",
+            "upc": "012345679032"
+        },
+        {
+            "name": "Men's Joggers",
+            "categories": ["pants", "men"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "gray",
+            "upc": "012345679033"
+        },
+        {
+            "name": "Women's Tube Top",
+            "categories": ["shirts", "women"],
+            "price": 1999,
+            "on_sale": true,
+            "sale_price": 1499,
+            "color": "white",
+            "upc": "012345679034"
+        },
+        {
+            "name": "Kids' Flip Flops",
+            "categories": ["shoes", "kids"],
+            "price": 1499,
+            "on_sale": false,
+            "sale_price": 999,
+            "color": "yellow",
+            "upc": "012345679035"
+        },
+        {
+            "name": "Men's Peacoat",
+            "categories": ["jackets", "men"],
+            "price": 10999,
+            "on_sale": true,
+            "sale_price": 8499,
+            "color": "navy",
+            "upc": "012345679036"
+        },
+        {
+            "name": "Women's Athletic Shoes",
+            "categories": ["shoes", "women"],
+            "price": 6999,
+            "on_sale": false,
+            "sale_price": 5499,
+            "color": "white",
+            "upc": "012345679037"
+        },
+        {
+            "name": "Unisex Cufflinks",
+            "categories": ["accessories", "unisex"],
+            "price": 2999,
+            "on_sale": true,
+            "sale_price": 2499,
+            "color": "black",
+            "upc": "012345679038"
+        },
+        {
+            "name": "Men's Turtleneck",
+            "categories": ["sweaters", "men"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "black",
+            "upc": "012345679039"
+        },
+        {
+            "name": "Women's Cover-Up",
+            "categories": ["swimwear", "women"],
+            "price": 3499,
+            "on_sale": true,
+            "sale_price": 2799,
+            "color": "blue",
+            "upc": "012345679040"
+        },
+        {
+            "name": "Kids' Polo Shirt",
+            "categories": ["shirts", "kids"],
+            "price": 1999,
+            "on_sale": false,
+            "sale_price": 1499,
+            "color": "green",
+            "upc": "012345679041"
+        },
+        {
+            "name": "Men's Denim Shirt",
+            "categories": ["shirts", "men"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "blue",
+            "upc": "012345679042"
+        },
+        {
+            "name": "Women's Hoodie",
+            "categories": ["sweatshirts", "women"],
+            "price": 4499,
+            "on_sale": false,
+            "sale_price": 3499,
+            "color": "gray",
+            "upc": "012345679043"
+        },
+        {
+            "name": "Unisex Suspenders",
+            "categories": ["accessories", "unisex"],
+            "price": 1999,
+            "on_sale": true,
+            "sale_price": 1499,
+            "color": "black",
+            "upc": "012345679044"
+        },
+        {
+            "name": "Men's Cargo Pants",
+            "categories": ["pants", "men"],
+            "price": 4999,
+            "on_sale": false,
+            "sale_price": 3999,
+            "color": "khaki",
+            "upc": "012345679045"
+        },
+        {
+            "name": "Women's Espadrilles",
+            "categories": ["shoes", "women"],
+            "price": 4999,
+            "on_sale": true,
+            "sale_price": 3999,
+            "color": "white",
+            "upc": "012345679046"
+        },
+        {
+            "name": "Kids' Tank Top",
+            "categories": ["shirts", "kids"],
+            "price": 1499,
+            "on_sale": false,
+            "sale_price": 999,
+            "color": "yellow",
+            "upc": "012345679047"
+        },
+        {
+            "name": "Men's Suit Jacket",
+            "categories": ["suits", "men"],
+            "price": 12999,
+            "on_sale": true,
+            "sale_price": 9999,
+            "color": "navy",
+            "upc": "012345679048"
+        },
+        {
+            "name": "Women's Off-Shoulder Top",
+            "categories": ["shirts", "women"],
+            "price": 2999,
+            "on_sale": false,
+            "sale_price": 2499,
+            "color": "red",
+            "upc": "012345679049"
+        },
+        {
+            "name": "Unisex Hairband",
+            "categories": ["accessories", "unisex"],
+            "price": 999,
+            "on_sale": true,
+            "sale_price": 799,
+            "color": "black",
+            "upc": "012345679050"
+        },
+        {
+            "name": "Men's Fleece Jacket",
+            "categories": ["jackets", "men"],
+            "price": 6999,
+            "on_sale": false,
+            "sale_price": 5499,
+            "color": "gray",
+            "upc": "012345679051"
+        },
+        {
+            "name": "Women's Pleated Skirt",
+            "categories": ["skirts", "women"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "blue",
+            "upc": "012345679052"
+        },
+        {
+            "name": "Kids' Swim Trunks",
+            "categories": ["swimwear", "kids"],
+            "price": 2499,
+            "on_sale": false,
+            "sale_price": 1999,
+            "color": "blue",
+            "upc": "012345679053"
+        },
+        {
+            "name": "Men's Linen Shirt",
+            "categories": ["shirts", "men"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "white",
+            "upc": "012345679054"
+        },
+        {
+            "name": "Women's Rain Boots",
+            "categories": ["shoes", "women"],
+            "price": 5999,
+            "on_sale": false,
+            "sale_price": 4999,
+            "color": "black",
+            "upc": "012345679055"
+        },
+        {
+            "name": "Unisex Arm Warmers",
+            "categories": ["accessories", "unisex"],
+            "price": 1499,
+            "on_sale": true,
+            "sale_price": 999,
+            "color": "gray",
+            "upc": "012345679056"
+        },
+        {
+            "name": "Men's Knit Sweater",
+            "categories": ["sweaters", "men"],
+            "price": 4499,
+            "on_sale": false,
+            "sale_price": 3499,
+            "color": "navy",
+            "upc": "012345679057"
+        },
+        {
+            "name": "Women's Bodysuit",
+            "categories": ["shirts", "women"],
+            "price": 3499,
+            "on_sale": true,
+            "sale_price": 2799,
+            "color": "black",
+            "upc": "012345679058"
+        },
+        {
+            "name": "Kids' Overalls",
+            "categories": ["pants", "kids"],
+            "price": 2999,
+            "on_sale": false,
+            "sale_price": 2499,
+            "color": "blue",
+            "upc": "012345679059"
+        },
+        {
+            "name": "Men's Quilted Vest",
+            "categories": ["jackets", "men"],
+            "price": 5999,
+            "on_sale": true,
+            "sale_price": 4999,
+            "color": "green",
+            "upc": "012345679060"
+        },
+        {
+            "name": "Women's Tunic",
+            "categories": ["shirts", "women"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "red",
+            "upc": "012345679061"
+        },
+        {
+            "name": "Unisex Bandana",
+            "categories": ["accessories", "unisex"],
+            "price": 999,
+            "on_sale": true,
+            "sale_price": 799,
+            "color": "black",
+            "upc": "012345679062"
+        },
+        {
+            "name": "Men's Chukka Boots",
+            "categories": ["shoes", "men"],
+            "price": 7999,
+            "on_sale": false,
+            "sale_price": 5999,
+            "color": "brown",
+            "upc": "012345679063"
+        },
+        {
+            "name": "Women's Sarong",
+            "categories": ["swimwear", "women"],
+            "price": 2999,
+            "on_sale": true,
+            "sale_price": 2499,
+            "color": "blue",
+            "upc": "012345679064"
+        },
+        {
+            "name": "Kids' Cardigan",
+            "categories": ["sweaters", "kids"],
+            "price": 2499,
+            "on_sale": false,
+            "sale_price": 1999,
+            "color": "yellow",
+            "upc": "012345679065"
+        },
+        {
+            "name": "Men's Bomber Shorts",
+            "categories": ["shorts", "men"],
+            "price": 3499,
+            "on_sale": true,
+            "sale_price": 2799,
+            "color": "khaki",
+            "upc": "012345679066"
+        },
+        {
+            "name": "Women's Puffer Vest",
+            "categories": ["jackets", "women"],
+            "price": 5999,
+            "on_sale": false,
+            "sale_price": 4999,
+            "color": "black",
+            "upc": "012345679067"
+        },
+        {
+            "name": "Unisex Lapel Pin",
+            "categories": ["accessories", "unisex"],
+            "price": 1499,
+            "on_sale": true,
+            "sale_price": 999,
+            "color": "black",
+            "upc": "012345679068"
+        },
+        {
+            "name": "Men's Button-Up Shirt",
+            "categories": ["shirts", "men"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "white",
+            "upc": "012345679069"
+        },
+        {
+            "name": "Women's Flannel Shirt",
+            "categories": ["shirts", "women"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "red",
+            "upc": "012345679070"
+        },
+        {
+            "name": "Kids' Rain Boots",
+            "categories": ["shoes", "kids"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "yellow",
+            "upc": "012345679071"
+        },
+        {
+            "name": "Men's Work Boots",
+            "categories": ["shoes", "men"],
+            "price": 9999,
+            "on_sale": true,
+            "sale_price": 7999,
+            "color": "brown",
+            "upc": "012345679072"
+        },
+        {
+            "name": "Women's Shift Dress",
+            "categories": ["dresses", "women"],
+            "price": 5999,
+            "on_sale": false,
+            "sale_price": 4999,
+            "color": "navy",
+            "upc": "012345679073"
+        },
+        {
+            "name": "Unisex Pocket Square",
+            "categories": ["accessories", "unisex"],
+            "price": 999,
+            "on_sale": true,
+            "sale_price": 799,
+            "color": "white",
+            "upc": "012345679074"
+        },
+        {
+            "name": "Men's Pajamas",
+            "categories": ["sleepwear", "men"],
+            "price": 3499,
+            "on_sale": false,
+            "sale_price": 2799,
+            "color": "blue",
+            "upc": "012345679075"
+        },
+        {
+            "name": "Women's Loungewear",
+            "categories": ["sleepwear", "women"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "gray",
+            "upc": "012345679076"
+        },
+        {
+            "name": "Kids' Belt",
+            "categories": ["accessories", "kids"],
+            "price": 1499,
+            "on_sale": false,
+            "sale_price": 999,
+            "color": "black",
+            "upc": "012345679077"
+        },
+        {
+            "name": "Men's Wool Sweater",
+            "categories": ["sweaters", "men"],
+            "price": 4999,
+            "on_sale": true,
+            "sale_price": 3999,
+            "color": "green",
+            "upc": "012345679078"
+        },
+        {
+            "name": "Women's Overalls",
+            "categories": ["pants", "women"],
+            "price": 5999,
+            "on_sale": false,
+            "sale_price": 4999,
+            "color": "blue",
+            "upc": "012345679079"
+        },
+        {
+            "name": "Unisex Anklet",
+            "categories": ["accessories", "unisex"],
+            "price": 1999,
+            "on_sale": true,
+            "sale_price": 1499,
+            "color": "black",
+            "upc": "012345679080"
+        },
+        {
+            "name": "Men's Casual Shoes",
+            "categories": ["shoes", "men"],
+            "price": 5999,
+            "on_sale": false,
+            "sale_price": 4999,
+            "color": "black",
+            "upc": "012345679081"
+        },
+        {
+            "name": "Women's Fleece Jacket",
+            "categories": ["jackets", "women"],
+            "price": 6999,
+            "on_sale": true,
+            "sale_price": 5499,
+            "color": "gray",
+            "upc": "012345679082"
+        },
+        {
+            "name": "Kids' Pajama Set",
+            "categories": ["sleepwear", "kids"],
+            "price": 2499,
+            "on_sale": false,
+            "sale_price": 1999,
+            "color": "blue",
+            "upc": "012345679083"
+        },
+        {
+            "name": "Men's Knit Polo",
+            "categories": ["shirts", "men"],
+            "price": 3499,
+            "on_sale": true,
+            "sale_price": 2799,
+            "color": "navy",
+            "upc": "012345679084"
+        },
+        {
+            "name": "Women's Camisole",
+            "categories": ["shirts", "women"],
+            "price": 1999,
+            "on_sale": false,
+            "sale_price": 1499,
+            "color": "white",
+            "upc": "012345679085"
+        },
+        {
+            "name": "Unisex Brooch",
+            "categories": ["accessories", "unisex"],
+            "price": 2499,
+            "on_sale": true,
+            "sale_price": 1999,
+            "color": "black",
+            "upc": "012345679086"
+        },
+        {
+            "name": "Men's Track Jacket",
+            "categories": ["jackets", "men"],
+            "price": 5999,
+            "on_sale": false,
+            "sale_price": 4999,
+            "color": "black",
+            "upc": "012345679087"
+        },
+        {
+            "name": "Women's Skort",
+            "categories": ["skirts", "women"],
+            "price": 3999,
+            "on_sale": true,
+            "sale_price": 2999,
+            "color": "blue",
+            "upc": "012345679088"
+        },
+        {
+            "name": "Kids' Fleece Jacket",
+            "categories": ["jackets", "kids"],
+            "price": 3999,
+            "on_sale": false,
+            "sale_price": 2999,
+            "color": "red",
+            "upc": "012345679089"
+        },
+        {
+            "name": "Men's Swim Shirt",
+            "categories": ["swimwear", "men"],
+            "price": 2999,
+            "on_sale": true,
+            "sale_price": 2499,
+            "color": "blue",
+            "upc": "012345679090"
+        },
+        {
+            "name": "Women's Moccasins",
+            "categories": ["shoes", "women"],
+            "price": 4999,
+            "on_sale": false,
+            "sale_price": 3999,
+            "color": "brown",
+            "upc": "012345679091"
+        },
+        {
+            "name": "Unisex Hair Clip",
+            "categories": ["accessories", "unisex"],
+            "price": 999,
+            "on_sale": true,
+            "sale_price": 799,
+            "color": "black",
+            "upc": "012345679092"
+        },
+        {
+            "name": "Men's Crew Socks",
+            "categories": ["accessories", "men"],
+            "price": 999,
+            "on_sale": false,
+            "sale_price": 799,
+            "color": "black",
+            "upc": "012345679093"
+        },
+        {
+            "name": "Women's Shirt Dress",
+            "categories": ["dresses", "women"],
+            "price": 5999,
+            "on_sale": true,
+            "sale_price": 4999,
+            "color": "white",
+            "upc": "012345679094"
+        },
+        {
+            "name": "Kids' Gloves",
+            "categories": ["accessories", "kids"],
+            "price": 1499,
+            "on_sale": false,
+            "sale_price": 999,
+            "color": "blue",
+            "upc": "012345679095"
+        }
+    ]
+}
