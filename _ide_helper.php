@@ -22791,6 +22791,117 @@ namespace JamesClark32\DevAudit\Facades {
             }
     }
 
+namespace Spatie\ResponseCache\Facades {
+    /**
+     * 
+     *
+     */
+    class ResponseCache {
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function enabled($request)
+        {
+            /** @var \Spatie\ResponseCache\ResponseCache $instance */
+            return $instance->enabled($request);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function shouldCache($request, $response)
+        {
+            /** @var \Spatie\ResponseCache\ResponseCache $instance */
+            return $instance->shouldCache($request, $response);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function shouldBypass($request)
+        {
+            /** @var \Spatie\ResponseCache\ResponseCache $instance */
+            return $instance->shouldBypass($request);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function cacheResponse($request, $response, $lifetimeInSeconds = null, $tags = [])
+        {
+            /** @var \Spatie\ResponseCache\ResponseCache $instance */
+            return $instance->cacheResponse($request, $response, $lifetimeInSeconds, $tags);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function hasBeenCached($request, $tags = [])
+        {
+            /** @var \Spatie\ResponseCache\ResponseCache $instance */
+            return $instance->hasBeenCached($request, $tags);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function getCachedResponseFor($request, $tags = [])
+        {
+            /** @var \Spatie\ResponseCache\ResponseCache $instance */
+            return $instance->getCachedResponseFor($request, $tags);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function clear($tags = [])
+        {
+            /** @var \Spatie\ResponseCache\ResponseCache $instance */
+            return $instance->clear($tags);
+        }
+
+        /**
+         * 
+         *
+         * @param string|array $uris
+         * @param string[] $tags
+         * @return \Spatie\ResponseCache\ResponseCache 
+         * @static 
+         */
+        public static function forget($uris, $tags = [])
+        {
+            /** @var \Spatie\ResponseCache\ResponseCache $instance */
+            return $instance->forget($uris, $tags);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function selectCachedItems()
+        {
+            /** @var \Spatie\ResponseCache\ResponseCache $instance */
+            return $instance->selectCachedItems();
+        }
+
+            }
+    }
+
 namespace Illuminate\Http {
     /**
      * 
@@ -27679,6 +27790,7 @@ namespace  {
     class View extends \Illuminate\Support\Facades\View {}
     class Vite extends \Illuminate\Support\Facades\Vite {}
     class DevAudit extends \JamesClark32\DevAudit\Facades\DevAudit {}
+    class ResponseCache extends \Spatie\ResponseCache\Facades\ResponseCache {}
 }
 
 
