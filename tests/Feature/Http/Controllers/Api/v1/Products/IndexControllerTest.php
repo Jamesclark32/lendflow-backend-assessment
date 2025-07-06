@@ -16,6 +16,12 @@ class IndexControllerTest extends TestCase
 {
     use RefreshDatabase;
 
+    protected function setUp(): void
+    {
+        parent::setUp();
+        Product::removeAllFromSearch();
+    }
+
     public function test_returns_200(): void
     {
         $user = User::factory()->create();
@@ -45,7 +51,6 @@ class IndexControllerTest extends TestCase
     {
         $user = User::factory()->create();
         Sanctum::actingAs($user);
-
 
         $category = Category::factory()->create([
             'name' => 'testing-category',
@@ -86,7 +91,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(3, 'products')
+            ->assertJsonCount(3, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ]);
@@ -130,7 +135,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -170,7 +175,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -221,7 +226,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -263,7 +268,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -283,7 +288,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(4, 'products')
+            ->assertJsonCount(4, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -325,7 +330,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -345,7 +350,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(4, 'products')
+            ->assertJsonCount(4, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -387,7 +392,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -426,7 +431,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -453,7 +458,7 @@ class IndexControllerTest extends TestCase
         $response->assertStatus(422);
     }
 
-    public function test_filters_join_correctly_with_an_d_logic(): void
+    public function test_filters_join_correctly_with_and_logic(): void
     {
         $user = User::factory()->create();
         Sanctum::actingAs($user);
@@ -488,7 +493,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])

@@ -9,10 +9,6 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('/user', function (Request $request) {
-//    return $request->user();
-// })->middleware('auth:sanctum');
-
 Route::get('/categories', function (Request $request) {
     $apiVersion = $request->attributes->get('api_version');
     $controllerClass = "App\\Http\\Controllers\\Api\\v{$apiVersion}\\Categories\\IndexController";

@@ -16,6 +16,12 @@ class IndexControllerTest extends TestCase
 {
     use RefreshDatabase;
 
+    protected function setUp(): void
+    {
+        parent::setUp();
+        Product::removeAllFromSearch();
+    }
+
     public function test_returns_200(): void
     {
         $user = User::factory()->create();
@@ -111,7 +117,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(3, 'products')
+            ->assertJsonCount(3, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ]);
@@ -163,7 +169,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -203,7 +209,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -254,7 +260,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -304,7 +310,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -325,7 +331,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(4, 'products')
+            ->assertJsonCount(4, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -375,7 +381,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -396,7 +402,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(4, 'products')
+            ->assertJsonCount(4, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -446,7 +452,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -493,7 +499,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])
@@ -563,7 +569,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(1, 'products')
+            ->assertJsonCount(1, 'products.data.hits')
             ->assertJsonStructure([
                 'products' => [],
             ])

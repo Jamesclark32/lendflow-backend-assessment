@@ -5,18 +5,17 @@ declare(strict_types=1);
 namespace App\Actions\Products;
 
 use App\Models\Product;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 use Meilisearch\Endpoints\Indexes;
 
 class IndexAction
 {
-    public function getProducts(string $searchTerm, Collection $filters): Collection
+    public function getProducts(string $searchTerm, Collection $filters): LengthAwarePaginator
     {
         return Product::search($searchTerm,
 
             function (Indexes $meiliSearch, string $query, array $options) use ($filters) {
-
-                $options['limit'] = 1000; // override meilisearch default of 20
 
                 $filterParts = [];
 
@@ -42,20 +41,8 @@ class IndexAction
 
                 return $meiliSearch->search($query, $options);
             })
-            ->get()
-            ->load('categories:id,slug')
-            ->map(function (Product $item): array {
-                return [
-                    'name' => $item->name,
-                    'slug' => $item->slug,
-                    'price' => $item->price,
-                    'on_sale' => $item->on_sale,
-                    'sale_price' => $item->sale_price,
-                    'color' => $item->color,
-                    'upc' => $item->upc,
-                    'categories' => $item->categories->pluck('slug')->toArray(),
-                ];
-            });
+            ->orderBy('name')
+            ->paginateRaw(50);
     }
 
     public function buildCategoryFilter(array $categories): string
