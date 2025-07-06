@@ -5,7 +5,8 @@
             "favicon",
             "filesystems",
             "js",
-            "php"
+            "php",
+            "responsecache"
         ],
         "paths": []
     }

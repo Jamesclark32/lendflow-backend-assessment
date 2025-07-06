@@ -6,19 +6,19 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "wednesday"
+      day: "sunday"
       time: "04:00"
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "thursday"
-      time: "04:00"
+      day: "sunday"
+      time: "05:00"
 
   - package-ecosystem: "composer"
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "friday"
-      time: "04:00"
+      day: "sunday"
+      time: "06:00"
