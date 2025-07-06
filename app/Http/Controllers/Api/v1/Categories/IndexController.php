@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers\Api\Categories;
+namespace App\Http\Controllers\Api\v1\Categories;
 
 use App\Actions\Categories\IndexAction;
 use App\Http\Controllers\Controller;
@@ -18,6 +18,7 @@ class IndexController extends Controller
 
         return response()->json([
             'categories' => $action->getCategories(),
-        ]);
+        ])
+            ->header('x-api-version', '1');
     }
 }

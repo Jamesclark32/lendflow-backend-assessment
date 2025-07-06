@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Feature\Controllers\Api\Products;
+namespace Tests\Feature\Http\Controllers\Api\v2\Products;
 
 use App\Models\Category;
 use App\Models\Product;
@@ -21,9 +21,68 @@ class IndexControllerTest extends TestCase
         $user = User::factory()->create();
         Sanctum::actingAs($user);
 
-        $response = $this->get(route('api.products.index'));
+        $category = Category::factory()->create([
+            'name' => 'testing-category',
+        ]);
+
+        $queryString = http_build_query([
+            'categories' => ['testing-category'],
+        ]);
+
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200);
+    }
+
+    public function test_returns_v2_response_header_on_first_call(): void
+    {
+        $user = User::factory()->create();
+        Sanctum::actingAs($user);
+
+        $category = Category::factory()->create([
+            'name' => 'testing-category',
+        ]);
+
+        $queryString = http_build_query([
+            'categories' => ['testing-category'],
+        ]);
+
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
+
+        $response->assertStatus(200);
+        $response->assertHeader('x-api-version', '2');
+    }
+
+    public function test_returns_v2_response_header_after_call_to_v2_is_cached(): void
+    {
+        $user = User::factory()->create();
+        Sanctum::actingAs($user);
+
+        $response = $this->get(route('api.products.index'), [
+            'x-api-version' => '1',
+        ]);
+
+        $response->assertStatus(200);
+        $response->assertHeader('x-api-version', '1');
+
+        $category = Category::factory()->create([
+            'name' => 'testing-category',
+        ]);
+
+        $queryString = http_build_query([
+            'categories' => ['testing-category'],
+        ]);
+
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
+
+        $response->assertStatus(200);
+        $response->assertHeader('x-api-version', '2');
     }
 
     public function test_returns_expected_data(): void
@@ -31,13 +90,25 @@ class IndexControllerTest extends TestCase
         $user = User::factory()->create();
         Sanctum::actingAs($user);
 
+        $category = Category::factory()->create([
+            'name' => 'testing-category',
+        ]);
+
         $products = Product::factory()->count(3)->create();
+
+        $category->products()->attach($products);
 
         // reindex Meilisearch
         $products->each->searchable();
         sleep(2);
 
-        $response = $this->get(route('api.products.index'));
+        $queryString = http_build_query([
+            'categories' => ['testing-category'],
+        ]);
+
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200)
             ->assertJsonCount(3, 'products')
@@ -52,7 +123,9 @@ class IndexControllerTest extends TestCase
 
     public function test_returns_redirect_if_not_authenticated(): void
     {
-        $response = $this->get(route('api.products.index'));
+        $response = $this->get(route('api.products.index'), [
+            'x-api-version' => '2',
+        ]);
         $response->assertStatus(302);
         $response->assertRedirect('/login');
     }
@@ -62,12 +135,19 @@ class IndexControllerTest extends TestCase
         $user = User::factory()->create();
         Sanctum::actingAs($user);
 
+        $category = Category::factory()->create([
+            'name' => 'testing-category',
+        ]);
+
         $products = Product::factory()->count(3)->create();
+
+        $category->products()->attach($products);
 
         $product = Product::factory()->create([
             'name' => 'testing-search',
         ]);
 
+        $category->products()->attach($product);
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
@@ -75,9 +155,12 @@ class IndexControllerTest extends TestCase
 
         $queryString = http_build_query([
             'search' => 'testing-search',
+            'categories' => ['testing-category'],
         ]);
 
-        $response = $this->get(route('api.products.index').'?'.$queryString);
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200)
             ->assertJsonCount(1, 'products')
@@ -115,7 +198,9 @@ class IndexControllerTest extends TestCase
             'categories' => ['testing-category'],
         ]);
 
-        $response = $this->get(route('api.products.index').'?'.$queryString);
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200)
             ->assertJsonCount(1, 'products')
@@ -164,7 +249,9 @@ class IndexControllerTest extends TestCase
             'categories' => ['testing-category-one', 'testing-category-two'],
         ]);
 
-        $response = $this->get(route('api.products.index').'?'.$queryString);
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200)
             ->assertJsonCount(1, 'products')
@@ -185,6 +272,10 @@ class IndexControllerTest extends TestCase
         $user = User::factory()->create();
         Sanctum::actingAs($user);
 
+        $category = Category::factory()->create([
+            'name' => 'testing-category',
+        ]);
+
         $products = Product::factory()->count(3)->create([
             'price' => 3499,
             'on_sale' => false,
@@ -195,6 +286,9 @@ class IndexControllerTest extends TestCase
             'on_sale' => false,
         ]);
 
+        $category->products()->attach($products);
+        $category->products()->attach($product);
+
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
@@ -202,9 +296,12 @@ class IndexControllerTest extends TestCase
 
         $queryString = http_build_query([
             'price' => 2500,
+            'categories' => ['testing-category'],
         ]);
 
-        $response = $this->get(route('api.products.index').'?'.$queryString);
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200)
             ->assertJsonCount(1, 'products')
@@ -220,9 +317,12 @@ class IndexControllerTest extends TestCase
         // Also check with query which would include all 4
         $queryString = http_build_query([
             'price' => 3500,
+            'categories' => ['testing-category'],
         ]);
 
-        $response = $this->get(route('api.products.index').'?'.$queryString);
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200)
             ->assertJsonCount(4, 'products')
@@ -241,6 +341,10 @@ class IndexControllerTest extends TestCase
         $user = User::factory()->create();
         Sanctum::actingAs($user);
 
+        $category = Category::factory()->create([
+            'name' => 'testing-category',
+        ]);
+
         $products = Product::factory()->count(3)->create([
             'price' => 3499,
             'on_sale' => true,
@@ -253,6 +357,9 @@ class IndexControllerTest extends TestCase
             'sale_price' => 1449,
         ]);
 
+        $category->products()->attach($products);
+        $category->products()->attach($product);
+
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
@@ -260,9 +367,12 @@ class IndexControllerTest extends TestCase
 
         $queryString = http_build_query([
             'price' => 1450,
+            'categories' => ['testing-category'],
         ]);
 
-        $response = $this->get(route('api.products.index').'?'.$queryString);
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200)
             ->assertJsonCount(1, 'products')
@@ -278,9 +388,12 @@ class IndexControllerTest extends TestCase
         // Also check with query which would include all 4
         $queryString = http_build_query([
             'price' => 3450,
+            'categories' => ['testing-category'],
         ]);
 
-        $response = $this->get(route('api.products.index').'?'.$queryString);
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200)
             ->assertJsonCount(4, 'products')
@@ -299,6 +412,10 @@ class IndexControllerTest extends TestCase
         $user = User::factory()->create();
         Sanctum::actingAs($user);
 
+        $category = Category::factory()->create([
+            'name' => 'testing-category',
+        ]);
+
         $products = Product::factory()->count(6)
             ->state(new Sequence(
                 ['color' => 'red'],
@@ -311,6 +428,9 @@ class IndexControllerTest extends TestCase
             'color' => 'orange',
         ]);
 
+        $category->products()->attach($products);
+        $category->products()->attach($product);
+
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
@@ -318,9 +438,12 @@ class IndexControllerTest extends TestCase
 
         $queryString = http_build_query([
             'color' => 'orange',
+            'categories' => ['testing-category'],
         ]);
 
-        $response = $this->get(route('api.products.index').'?'.$queryString);
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200)
             ->assertJsonCount(1, 'products')
@@ -339,6 +462,10 @@ class IndexControllerTest extends TestCase
         $user = User::factory()->create();
         Sanctum::actingAs($user);
 
+        $category = Category::factory()->create([
+            'name' => 'testing-category',
+        ]);
+
         $products = Product::factory()->count(6)
             ->create([
                 'on_sale' => false,
@@ -348,6 +475,9 @@ class IndexControllerTest extends TestCase
             'on_sale' => true,
         ]);
 
+        $category->products()->attach($products);
+        $category->products()->attach($product);
+
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
@@ -355,9 +485,12 @@ class IndexControllerTest extends TestCase
 
         $queryString = http_build_query([
             'on_sale' => 'true',
+            'categories' => ['testing-category'],
         ]);
 
-        $response = $this->get(route('api.products.index').'?'.$queryString);
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200)
             ->assertJsonCount(1, 'products')
@@ -380,7 +513,9 @@ class IndexControllerTest extends TestCase
             'on_sale' => 'orange',
         ]);
 
-        $response = $this->get(route('api.products.index').'?'.$queryString);
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(422);
     }
@@ -389,6 +524,10 @@ class IndexControllerTest extends TestCase
     {
         $user = User::factory()->create();
         Sanctum::actingAs($user);
+
+        $category = Category::factory()->create([
+            'name' => 'testing-category',
+        ]);
 
         $products = Product::factory()->count(6)
             ->create([
@@ -404,6 +543,9 @@ class IndexControllerTest extends TestCase
             'sale_price' => 2000,
         ]);
 
+        $category->products()->attach($products);
+        $category->products()->attach($product);
+
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
@@ -413,9 +555,12 @@ class IndexControllerTest extends TestCase
             'on_sale' => true,
             'color' => 'orange',
             'price' => 2005,
+            'categories' => ['testing-category'],
         ]);
 
-        $response = $this->get(route('api.products.index').'?'.$queryString);
+        $response = $this->get(route('api.products.index').'?'.$queryString, [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200)
             ->assertJsonCount(1, 'products')
@@ -427,5 +572,24 @@ class IndexControllerTest extends TestCase
         foreach ($products as $product) {
             $response->assertDontSeeText(['name' => $product->name]);
         }
+    }
+
+    public function test_categories_is_required_for_api_v1(): void
+    {
+        $user = User::factory()->create();
+        Sanctum::actingAs($user);
+
+        $products = Product::factory()->count(3)->create();
+
+        // reindex Meilisearch
+        $products->each->searchable();
+        sleep(2);
+
+        $response = $this->get(route('api.products.index'), [
+            'x-api-version' => '2',
+        ]);
+
+        $response->assertStatus(422)
+            ->assertJsonFragment(['errors' => ['categories' => ['The categories field is required.']]]);
     }
 }

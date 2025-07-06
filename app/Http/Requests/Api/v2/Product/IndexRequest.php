@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Requests\Api\Product;
+namespace App\Http\Requests\Api\v2\Product;
 
 use App\Models\Product;
 use Illuminate\Foundation\Http\FormRequest;
@@ -20,7 +20,7 @@ class IndexRequest extends FormRequest
     {
         return [
             'search' => 'nullable|string',
-            'categories' => 'nullable|array|exists:categories,slug',
+            'categories' => 'required|array|exists:categories,slug',
             'color' => 'nullable|string',
             'price' => 'nullable|integer|min:0|max:99999',
             'on_sale' => 'nullable|in:1,true,0,false',
