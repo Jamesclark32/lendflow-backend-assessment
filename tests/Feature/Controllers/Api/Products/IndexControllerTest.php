@@ -35,7 +35,7 @@ class IndexControllerTest extends TestCase
 
         // reindex Meilisearch
         $products->each->searchable();
-        sleep(1);
+        sleep(2);
 
         $response = $this->get(route('api.products.index'));
 
