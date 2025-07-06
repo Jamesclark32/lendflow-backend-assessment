@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Feature\Controllers\Api\Categories;
+namespace Tests\Feature\Http\Controllers\Api\v2\Categories;
 
 use App\Models\Category;
 use App\Models\User;
@@ -19,7 +19,9 @@ class IndexControllerTest extends TestCase
         $user = User::factory()->create();
         Sanctum::actingAs($user);
 
-        $response = $this->get(route('api.categories.index'));
+        $response = $this->get(route('api.categories.index'), [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200);
     }
@@ -31,7 +33,9 @@ class IndexControllerTest extends TestCase
 
         $categories = Category::factory()->count(3)->create();
 
-        $response = $this->get(route('api.categories.index'));
+        $response = $this->get(route('api.categories.index'), [
+            'x-api-version' => '2',
+        ]);
 
         $response->assertStatus(200)
             ->assertJsonCount(3, 'categories')
@@ -46,7 +50,9 @@ class IndexControllerTest extends TestCase
 
     public function test_returns_redirect_if_not_authenticated(): void
     {
-        $response = $this->get(route('api.categories.index'));
+        $response = $this->get(route('api.categories.index'), [
+            'x-api-version' => '2',
+        ]);
         $response->assertStatus(302);
         $response->assertRedirect('/login');
     }

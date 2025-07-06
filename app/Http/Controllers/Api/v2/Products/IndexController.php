@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers\Api\Products;
+namespace App\Http\Controllers\Api\v2\Products;
 
 use App\Actions\Products\IndexAction;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Api\Product\IndexRequest;
+use App\Http\Requests\Api\v2\Product\IndexRequest;
 use App\Models\Product;
 use Illuminate\Http\JsonResponse;
 
@@ -21,6 +21,7 @@ class IndexController extends Controller
                 searchTerm: $request->validated('search', ''),
                 filters: collect($request->validated())
             ),
-        ]);
+        ])
+            ->header('x-api-version', '2');
     }
 }

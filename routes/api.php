@@ -9,16 +9,29 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('/categories', App\Http\Controllers\Api\Categories\IndexController::class)
+Route::get('/categories', function (Request $request) {
+    $apiVersion = $request->attributes->get('api_version');
+    $controllerClass = "App\\Http\\Controllers\\Api\\v{$apiVersion}\\Categories\\IndexController";
+
+    return app()->call($controllerClass);
+})
     ->middleware([
         'cacheResponse:3600',
         'auth:sanctum',
+        'versionedApi',
     ])
     ->name('api.categories.index');
 
-Route::get('/products', App\Http\Controllers\Api\Products\IndexController::class)
+Route::get('/products', function (Request $request) {
+    $apiVersion = $request->attributes->get('api_version');
+
+    $controllerClass = "App\\Http\\Controllers\\Api\\v{$apiVersion}\\Products\\IndexController";
+
+    return app()->call($controllerClass);
+})
     ->middleware([
-                'cacheResponse:3600',
-                'auth:sanctum',
+        'cacheResponse:3600',
+        'auth:sanctum',
+        'versionedApi',
     ])
     ->name('api.products.index');

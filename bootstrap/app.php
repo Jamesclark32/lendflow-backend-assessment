@@ -16,6 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias([
             'cacheResponse' => Spatie\ResponseCache\Middlewares\CacheResponse::class,
+            'versionedApi' => App\Http\Middleware\ApiVersionMiddleware::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
