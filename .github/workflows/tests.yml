@@ -25,6 +25,12 @@ jobs:
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
+      - name: Start Meilisearch
+        uses: moy2010/meilisearch-github-action@0.1
+        with:
+          meilisearch-version: v1.8.1
+          meilisearch-port: 7700
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -75,4 +81,6 @@ jobs:
           DB_DATABASE: testing_database
           DB_USERNAME: root
           DB_PASSWORD: ''
+          MEILISEARCH_HOST: 'http://127.0.0.1:7700'
+          MEILISEARCH_KEY: ''
         run: ./vendor/bin/pest
