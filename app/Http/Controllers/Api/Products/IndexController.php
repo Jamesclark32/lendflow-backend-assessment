@@ -14,7 +14,7 @@ class IndexController extends Controller
 {
     public function __invoke(IndexRequest $request, IndexAction $action): JsonResponse
     {
-                $this->authorize('viewAny', Product::class);
+        $this->authorize('viewAny', Product::class);
 
         return response()->json([
             'products' => $action->getProducts(

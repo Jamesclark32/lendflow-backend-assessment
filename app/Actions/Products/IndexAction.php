@@ -21,27 +21,19 @@ class IndexAction
                 $filterParts = [];
 
                 if ($filters->has('categories')) {
-                    $categoryFilters = [];
-                    foreach ($filters->get('categories') as $category) {
-                        $categoryFilters[] = "categories IN [\"{$category}\"]";
-                    }
-                    $filterParts[] = '('.implode(' AND ', $categoryFilters).')';
+                    $filterParts[] = $this->buildCategoryFilter($filters->get('categories'));
                 }
 
                 if ($filters->has('price')) {
-                    $maxPrice = $filters->get('price');
-                    $priceFilter = "(on_sale = true AND sale_price <= {$maxPrice}) OR (on_sale = false AND price <= {$maxPrice})";
-                    $filterParts[] = "({$priceFilter})";
+                    $filterParts[] = $this->buildPriceFilter((int) $filters->get('price'));
                 }
 
                 if ($filters->has('color')) {
-                    $colorFilter = "(color =  {$filters->get('color')})";
-                    $filterParts[] = "({$colorFilter})";
+                    $filterParts[] = $this->buildColorFilter((string) $filters->get('color'));
                 }
 
                 if ($filters->has('on_sale')) {
-                    $onSale = "(on_sale =  {$filters->get('on_sale')})";
-                    $filterParts[] = "({$onSale})";
+                    $filterParts[] = $this->buildOnSaleFilter((string) $filters->get('on_sale'));
                 }
 
                 if ($filterParts !== []) {
@@ -64,5 +56,33 @@ class IndexAction
                     'categories' => $item->categories->pluck('slug')->toArray(),
                 ];
             });
+    }
+
+    public function buildCategoryFilter(array $categories): string
+    {
+        $categoryFilters = [];
+        foreach ($categories as $category) {
+            $categoryFilters[] = "categories IN [\"{$category}\"]";
+        }
+
+        return '('.implode(' AND ', $categoryFilters).')';
+
+    }
+
+    public function buildPriceFilter(int $maxPrice): string
+    {
+        return "((on_sale = true AND sale_price <= {$maxPrice}) OR (on_sale = false AND price <= {$maxPrice}))";
+    }
+
+    public function buildColorFilter(string $color): string
+    {
+        return "(color = \"$color\")";
+    }
+
+    public function buildOnSaleFilter(string|bool|int $onSale): string
+    {
+        $bool = filter_var($onSale, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false';
+
+        return "(on_sale = $bool)";
     }
 }
