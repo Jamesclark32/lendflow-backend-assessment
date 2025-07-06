@@ -35,6 +35,7 @@ class IndexControllerTest extends TestCase
 
         // reindex Meilisearch
         $products->each->searchable();
+        sleep(1);
 
         $response = $this->get(route('api.products.index'));
 
@@ -70,7 +71,7 @@ class IndexControllerTest extends TestCase
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
-        sleep(1);
+        sleep(2);
 
         $queryString = http_build_query([
             'search' => 'testing-search',
@@ -108,7 +109,7 @@ class IndexControllerTest extends TestCase
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
-        sleep(1);
+        sleep(2);
 
         $queryString = http_build_query([
             'categories' => ['testing-category'],
@@ -157,7 +158,7 @@ class IndexControllerTest extends TestCase
         $productOne->searchable();
         $productTwo->searchable();
         $productThree->searchable();
-        sleep(1);
+        sleep(2);
 
         $queryString = http_build_query([
             'categories' => ['testing-category-one', 'testing-category-two'],
@@ -197,7 +198,7 @@ class IndexControllerTest extends TestCase
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
-        sleep(1);
+        sleep(2);
 
         $queryString = http_build_query([
             'price' => 2500,
@@ -255,7 +256,7 @@ class IndexControllerTest extends TestCase
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
-        sleep(1);
+        sleep(2);
 
         $queryString = http_build_query([
             'price' => 1450,
@@ -313,7 +314,7 @@ class IndexControllerTest extends TestCase
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
-        sleep(1);
+        sleep(2);
 
         $queryString = http_build_query([
             'color' => 'orange',
@@ -350,7 +351,7 @@ class IndexControllerTest extends TestCase
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
-        sleep(1);
+        sleep(2);
 
         $queryString = http_build_query([
             'on_sale' => 'true',
@@ -406,7 +407,7 @@ class IndexControllerTest extends TestCase
         // reindex Meilisearch
         $products->each->searchable();
         $product->searchable();
-        sleep(1);
+        sleep(2);
 
         $queryString = http_build_query([
             'on_sale' => true,
