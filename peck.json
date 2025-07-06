@@ -2,6 +2,7 @@
     "preset": "laravel",
     "ignore": {
         "words": [
+            "cacheable",
             "favicon",
             "filesystems",
             "js",

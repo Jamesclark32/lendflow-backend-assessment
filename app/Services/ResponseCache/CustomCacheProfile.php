@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Services\ResponseCache;
 
 use Illuminate\Http\Request;
@@ -13,9 +15,6 @@ class CustomCacheProfile extends BaseCacheProfile
     /**
      * Incorporate the custom x-api-version header into the cache key
      * to ensure api versions are cached distinctly from each other
-     *
-     * @param Request $request
-     * @return string
      */
     public function useCacheNameSuffix(Request $request): string
     {
@@ -41,15 +40,11 @@ class CustomCacheProfile extends BaseCacheProfile
 
     public function shouldCacheResponse(Response $response): bool
     {
-        if (! $this->hasCacheableResponseCode($response)) {
+        if (!$this->hasCacheableResponseCode($response)) {
             return false;
         }
 
-        if (! $this->hasCacheableContentType($response)) {
-            return false;
-        }
-
-        return true;
+        return $this->hasCacheableContentType($response);
     }
 
     public function hasCacheableResponseCode(Response $response): bool
@@ -58,25 +53,21 @@ class CustomCacheProfile extends BaseCacheProfile
             return true;
         }
 
-        if ($response->isRedirection()) {
-            return true;
-        }
-
-        return false;
+        return $response->isRedirection();
     }
 
     public function hasCacheableContentType(Response $response): bool
     {
         $contentType = $response->headers->get('Content-Type', '');
 
-        if (str_starts_with($contentType, 'text/')) {
+        if (str_starts_with((string) $contentType, 'text/')) {
             return true;
         }
 
-        if (Str::contains($contentType, ['/json', '+json'])) {
-            return true;
+        if ($contentType === null || $contentType === '' || $contentType === '0') {
+            return false;
         }
 
-        return false;
+        return Str::contains($contentType, ['/json', '+json']);
     }
 }
