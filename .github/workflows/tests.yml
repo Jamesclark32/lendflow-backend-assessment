@@ -72,7 +72,7 @@ jobs:
         run: npm run build
 
       - name: Sync Meilisearch Settings
-        run:  php artisan scout:sync-index-settings && php artisan scout:import "App\Models\Product"
+        run:  php artisan scout:sync-index-settings
 
       - name: Run Tests
         env:
