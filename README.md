@@ -1,5 +1,10 @@
 :wave: Hello!
 
+## Getting started
+
+This application requires an instance of meilisearch and mysql working, and relevant configurations set in .env
+
+
 ## Tooling
 
 I've installed a number of composer packages to aid in development: 
@@ -54,3 +59,9 @@ A few things I would have asked clarifying questions about in a real-world scena
   starting with v2, and assume the lack of version number is v1. I would want to explore if this code-based perspective
   of things makes sense and works okay from any business needs perspective. 
 
+## Testing
+
+I'm using pest for running tests, but prefer writing phpunit style class-based tests. This results in a mixture of 
+test styles as all the boilerplate tests automatically installed are pest styled. A bit messy, perhaps, but effective.
+
+With tests, as with all things, I'm always happy to adapt to the conventions of a codebase to keep things consistent.
