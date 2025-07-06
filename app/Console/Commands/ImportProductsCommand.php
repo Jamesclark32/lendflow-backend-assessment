@@ -10,6 +10,7 @@ use App\Models\Product;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use Str;
 
@@ -33,6 +34,7 @@ class ImportProductsCommand extends Command
 
         if (!$importData) {
             $this->error('Error reading source file');
+
             return self::FAILURE;
         }
 
@@ -41,6 +43,7 @@ class ImportProductsCommand extends Command
 
         if (!is_array($importData)) {
             $this->error('Invalid or missing products data in import.json');
+
             return self::FAILURE;
         }
 
@@ -57,7 +60,14 @@ class ImportProductsCommand extends Command
         $this->info('Processing relationships...');
         $this->storeCategoryProductRelationships($importData);
 
+        $this->info('Updating search index...');
+        Artisan::call('scout:import', ['model' => Product::class]);
+
+        $this->info('Clearing response cache...');
+        Artisan::call('responsecache:clear');
+
         $this->info('Import completed');
+
         return self::SUCCESS;
     }
 

@@ -38,7 +38,7 @@ class IndexControllerTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-            ->assertJsonCount(3, 'categories')
+            ->assertJsonCount(3, 'categories.data')
             ->assertJsonStructure([
                 'categories' => [],
             ]);

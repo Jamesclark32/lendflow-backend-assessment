@@ -30,7 +30,7 @@ class IndexRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'categories.exists' => 'categories must be slug values from the categories endpoint.',
+            'categories.exists' => 'categories must contain only valid category slugs.',
         ];
     }
 

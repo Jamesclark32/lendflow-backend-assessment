@@ -144,7 +144,7 @@ return [
         'index-settings' => [
             'products' => [
                 'filterableAttributes' => ['color', 'on_sale', 'categories', 'price', 'sale_price'],
-                'sortableAttributes' => [],
+                'sortableAttributes' => ['name'],
                 'searchableAttributes' => ['name'],
             ],
         ],
