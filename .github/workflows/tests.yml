@@ -71,6 +71,9 @@ jobs:
       - name: Build Assets
         run: npm run build
 
+      - name: Sync Meilisearch Settings
+        run:  php artisan scout:sync-index-settings && php artisan scout:import "App\Models\Product"
+
       - name: Run Tests
         env:
           APP_ENV: testing
