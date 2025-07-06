@@ -2,13 +2,9 @@ name: tests
 
 on:
   push:
-    branches:
-      - develop
-      - main
+    branches: [develop, main]
   pull_request:
-    branches:
-      - develop
-      - main
+    branches: [develop, main]
 
 jobs:
   ci:
@@ -24,13 +20,14 @@ jobs:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
-    steps:
-      - name: Start Meilisearch
-        uses: moy2010/meilisearch-github-action@0.1
-        with:
-          meilisearch-version: v1.8.1
-          meilisearch-port: 7700
 
+      meilisearch:
+        image: getmeili/meilisearch:v1.8.1
+        ports:
+          - 7700:7700
+        options: --health-cmd="curl http://localhost:7700/health || exit 1" --health-interval=5s --health-timeout=5s --health-retries=10
+
+    steps:
       - name: Checkout
         uses: actions/checkout@v4
 
