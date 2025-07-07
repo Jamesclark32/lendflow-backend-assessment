@@ -1,12 +1,15 @@
 :wave: Hello! 
 
 This is my output after completing the challenge as described in [The requirements document](requirements.pdf). 
-I've written some high-level notes here, and would welcome any questions or feedback. Thanks for reading!
+I've written some high-level notes here. I'd love to hear any questions or feedback, and talk through my thinking
+while working through this. Thanks for reading!
 
-## Getting started
+
+## Dependencies
 
 This application requires an instance of Meilisearch and mysql working, and relevant configurations set in .env.
 You will then need to do a one-time sync of Meilisearch settings using: `php artisan scout:sync-index-settings`
+
 
 ## Database seeding
 
@@ -22,8 +25,19 @@ Once you have registered a user and obtained an API token, you can send requests
 Be sure to add an authorization header to your requests: `Authorization: Bearer <your_api_token_here>`
 as well as an API version header (unless you are happy to default to v1): `X-API-Version: 1`
 
-You should then be able to send relevant GET requests.
+You should then be able to send relevant GET requests. 
+The available routes are: 
+`api/categories`
+`api/products`
 
+The `api/products` route supposes some query parameters:
+    `search` to search against product names
+    `categories[]` to filter by categories
+    `price` to filter by a max price
+    `on_sale` to filter based on product sale status
+    `color` to filter by product color
+
+For example, `api/products?search=linen&color=white&on_sale=true&categories[]=shirts`
 
 ## Response caching
 
@@ -60,8 +74,13 @@ A few things I would have asked clarifying questions about in a real-world scena
   adding the v2 in a real project, I would try to have conversations to explore working towards a URL-based versioning schema.
   Supporting the existing endpoints is a priority, but it might be a good idea to introduce URL-based versioning 
   starting with v2, and assume URLs that don't specify the version number are v1. I would want to explore if this code-based perspective
-  of things makes sense and works okay for business needs. 
-- Any number of small topics such as which columns to include in responses, slugs vs. uuids, etc.
+  of things makes sense and works okay for business needs. I have structured the controllers and form request classes as 
+  if each was a distinct route even though they are so similar. No, this isn't very DRY. In my experience, this is likely
+  to be the cleanest and most maintainable solution going forward as new changes come in. The action classes are currently shared,
+  as there was no need to differentiate between the two versions for them. Inevitable a scenario would come up where a solution
+  would need to be architected, but best to defer that decision until it comes up and more information is available.
+- Any number of small topics such as which columns to include in responses and slugs vs. uuids.
+
 
 ## Testing
 
